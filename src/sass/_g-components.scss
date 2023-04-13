@@ -1,0 +1,31 @@
+@import "./mixin";
+// Globle components
+/* ralewat font : from google*/
+*{
+  font-family: 'Raleway' ,sans-serif;
+}
+
+/* style globle heading for sections*/
+.glob-tittle {
+  text-transform: uppercase;
+  margin: 20px 0;
+  h1 {
+      font-weight: bold;
+      font-size:50px;
+      @include breakpoint(md){
+      font-size: 100px;
+    }
+    letter-spacing: 30px;
+    color: #80808029;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 40px;
+    top: -65px;
+    @include breakpoint(md){
+      top:-110px;
+    }
+    position: relative;
+    color: #0284c7;
+  }
+}

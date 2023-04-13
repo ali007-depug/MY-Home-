@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@-webkit-keyframes show {
+  from {
+    right: -60%; }
+  to {
+    right: 0; } }
+@keyframes show {
+  from {
+    right: -60%; }
+  to {
+    right: 0; } }
+.show-anim {
+  -webkit-animation: show 0.3s ease-in forwards;
+          animation: show 0.3s ease-in forwards; }
+
+@-webkit-keyframes hide {
+  from {
+    right: 0; }
+  to {
+    right: -60%; } }
+
+@keyframes hide {
+  from {
+    right: 0; }
+  to {
+    right: -60%; } }
+.hide-anim {
+  -webkit-animation: hide 0.3s ease-in backwards;
+          animation: hide 0.3s ease-in backwards; }
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0; }
+  to {
+    visibility: visible;
+    opacity: 1; } }
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0; }
+  to {
+    visibility: visible;
+    opacity: 1; } }
+.fade-in {
+  -webkit-animation: fade-in 0.5s ease-in forwards;
+          animation: fade-in 0.5s ease-in forwards; }
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1; }
+  to {
+    visibility: hidden;
+    opacity: 0; } }
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1; }
+  to {
+    visibility: hidden;
+    opacity: 0; } }
+.fade-out {
+  -webkit-animation: fade-out 0.5s ease-in forwards;
+          animation: fade-out 0.5s ease-in forwards; }
+
+/* ralewat font : from google*/
+* {
+  font-family: 'Raleway' ,sans-serif; }
+
+/* style globle heading for sections*/
+.glob-tittle {
+  text-transform: uppercase;
+  margin: 20px 0; }
+  .glob-tittle h1 {
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 30px;
+    color: #80808029; }
+    @media (min-width: 768px) {
+      .glob-tittle h1 {
+        font-size: 100px; } }
+  .glob-tittle h2 {
+    font-weight: 600;
+    font-size: 40px;
+    top: -65px;
+    position: relative;
+    color: #0284c7; }
+    @media (min-width: 768px) {
+      .glob-tittle h2 {
+        top: -110px; } }
+
+header {
+  /* animate burger menu */ }
+  header .links {
+    /* style overlay */
+    /* style burger menu icon*/ }
+    header .links .overlay {
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+    header .links .icon {
+      position: relative; }
+      header .links .icon span {
+        display: block;
+        margin-left: 30px;
+        height: 2px;
+        background-color: #0284c7;
+        margin-bottom: 5px;
+        width: 30px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -webkit-transform-origin: 4px 1px;
+                transform-origin: 4px 1px;
+        z-index: 30; }
+        header .links .icon span:last-child {
+          margin-bottom: 0; }
+    header .links ul {
+      position: absolute;
+      background-color: #ddd;
+      text-align: center;
+      padding: 20px;
+      top: 70px;
+      right: -60%;
+      z-index: 30;
+      min-width: 300px; }
+      header .links ul li {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 1rem;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        color: #0e98d7; }
+        header .links ul li :hover {
+          -webkit-transition: 0.5s;
+          transition: 0.5s;
+          padding-left: 30px; }
+  header.open .icon span:first-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  header.open .icon span:nth-child(2) {
+    opacity: 0; }
+  header.open .icon span:last-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+
+/* style background for even sections (2n)*/
+.wraper {
+  /* style all text below imgs*/ }
+  .wraper > div:nth-child(even) {
+    background-color: rgba(221, 221, 221, 0.808); }
+  .wraper .home {
+    /* style imgs inside home wraper*/ }
+    @media (min-width: 768px) {
+      .wraper .home .img-container .box {
+        -ms-flex-preferred-size: 40%;
+            flex-basis: 40%;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; } }
+    @media (min-width: 1024px) {
+      .wraper .home .img-container .box {
+        -ms-flex-preferred-size: 25%;
+            flex-basis: 25%;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; } }
+  .wraper .text {
+    background-color: #0f172a;
+    color: white;
+    border-radius: 4px;
+    text-transform: capitalize; }
+
+@media (min-width: 1024px) {
+  .lv-gallery .lv-box,
+  .kitchen-gallery .kitchen-box,
+  .library-gallery .library-box {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+
+  .home-garden-gallery .home-garden-box {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; } }
+
+/*# sourceMappingURL=main.css.map */

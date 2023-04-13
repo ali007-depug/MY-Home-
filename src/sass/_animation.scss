@@ -1,0 +1,61 @@
+// for side menu
+@keyframes show {
+    from{
+        right:-60%;
+    }
+    
+    to{
+        right:0;
+    }
+    
+}
+
+.show-anim{
+    animation: show 0.3s ease-in  forwards ;
+    
+}
+
+@keyframes hide{
+    from{
+        right: 0;
+    }
+   
+    to{
+        right: -60%;
+    }
+}
+
+.hide-anim{
+    animation: hide 0.3s ease-in backwards;
+}
+
+//  End For side menu 
+
+// for overlay 
+@keyframes fade-in{
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.fade-in{
+    animation: fade-in 0.5s ease-in forwards;
+}
+
+@keyframes fade-out{
+    from{
+        visibility: visible;
+        opacity: 1;
+    }
+    to{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.fade-out{
+    animation: fade-out 0.5s ease-in forwards;
+}
